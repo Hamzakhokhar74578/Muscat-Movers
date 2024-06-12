@@ -1,0 +1,104 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link href="~/css/first.css" rel="stylesheet" />
+    <link href="~/css/abu.css" rel="stylesheet" />
+    <link href="~/css/servicess.css" rel="stylesheet" />
+    <link href="~/css/contactus.css" rel="stylesheet" />
+
+    <link rel="icon" type="image/png" href="~/images/logo.png">
+    <title>Muscat Movers & Shifting</title>
+</head>
+<body>
+    <main>
+        @{
+          <!--  ViewBag.Title = "Index";-->
+        }
+
+        <h2>@ViewBag.Title.</h2>
+
+        <!-- Display TempData -->
+        @if (TempData["hamza"] != null)
+        {
+            <div>
+                <strong>TempData:</strong> @TempData["hamza"]
+            </div>
+        }
+
+        <!-- Display ViewData -->
+        @if (ViewData["1"] != null)
+        {
+            <div>
+                <strong>ViewData:</strong> @ViewData["this is second line"]
+            </div>
+        }
+
+        <!-- Display ViewBag -->
+        @if (ViewBag.m != null)
+        {
+            <div>
+                <strong>ViewBag:</strong> @ViewBag.m
+            </div>
+        }
+    </main>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="~/images/logo.png" alt="logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/Home/Index">Home</a></li>
+                    <li><a href="/Home/Aboutt">About Us</a></li>
+                    <li><a href="/Home/Contact">Contact Us</a></li>
+                    <li><a href="/Home/Services">Services</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <div>
+        @RenderBody()
+    </div>
+
+
+    <footer class="footer">
+
+        <div class="footer-section">
+            <div class="map-section">
+                <h2>Map</h2>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d234022.52055370004!2d58.259703857557334!3d23.582737835540122!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e91ffa8879aafc9%3A0xdb53876d0d79a72c!2sMuscat%2C%20Oman!5e0!3m2!1sen!2s!4v1716932653279!5m2!1sen!2s" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contact-section">
+                <h2>Contact Us</h2>
+                <i style="font-size:24px" class="fa">&#xf232;</i>
+                <a href="https://wa.me/923200577298/">0096897169749</a>
+                <p>Email: 22201001-021@uskt.edu.pk</p>
+                <p>Address: Mascut, Oman</p>
+            </div>
+            <div class="info-section">
+                <h1>
+                    Always Prompt and Professional
+                </h1>
+                <h3>
+                    We do everything as promised.
+
+                </h3>
+                <hr>
+                <p>
+                    Providing fully integrated relocation and moving services for local, regional, and international moves. Providing organized distribution systems delivering from our warehouse to anywhere in Oman.
+
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+
+
+</body>
+</html>
